@@ -99,30 +99,11 @@ All colors are defined as CSS variables in `css/styles.css`:
 }
 ```
 
-## 🚀 Deployment to GitHub Pages
-
-1. Push your code to GitHub:
-```bash
-git add .
-git commit -m "Initial commit"
-git push origin main
-```
-
-2. Go to your repository settings
-3. Navigate to "Pages" section
-4. Select "main" branch as source
-5. Click "Save"
-6. Your site will be live at: `https://your-username.github.io/litellm-gateway-landing/`
-
-## 📝 License
-
-MIT License - feel free to use this template for your own projects!
-
 ## 👤 Author
 
 **Your Name**
-- LinkedIn: [Your Profile](https://linkedin.com/in/your-profile)
-- GitHub: [@your-username](https://github.com/your-username)
+- LinkedIn: [Your Profile](https://linkedin.com/in/dvampofo)
+- GitHub: [@your-username](https://github.com/dvampofo)
 
 ## 🙏 Acknowledgments
 
