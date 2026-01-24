@@ -52,7 +52,3 @@ litellm-gateway-landing/
 - Built with [Bootstrap](https://getbootstrap.com/)
 - Fonts from [Google Fonts](https://fonts.google.com/)
 - Color palette from [Colorffy](https://colorffy.com/)
-
-```
-
-```
