@@ -296,6 +296,7 @@ h4 {
    =================================== */
 .screenshot-placeholder {
   background-color: var(--clr-surface-a20);
+  background-image: url("/images/dashboard1.png");
   border: 2px dashed var(--clr-surface-a30);
   border-radius: 12px;
   min-height: 400px;
