@@ -292,18 +292,28 @@ h4 {
 }
 
 /* ===================================
-   Screenshot Placeholder
+   Screenshot Images
    =================================== */
-.screenshot-placeholder .screenshot-img {
+.screenshot-image {
   width: 100%;
-  height: 100%;
-  object-fit: contain;
-  border-radius: 8px;
+  min-height: 400px;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 12px;
+  border: 2px solid var(--clr-surface-a30);
+  background-color: var(--clr-surface-a20);
+  transition: all 0.3s ease;
 }
 
+.screenshot-image:hover {
+  border-color: var(--clr-primary-a20);
+  box-shadow: 0 10px 30px rgba(73, 103, 188, 0.2);
+  transform: translateY(-5px);
+}
+
+/* Keep placeholder for areas without images yet */
 .screenshot-placeholder {
   background-color: var(--clr-surface-a20);
-  background-image: url("/images/dashboard1.png");
   border: 2px dashed var(--clr-surface-a30);
   border-radius: 12px;
   min-height: 400px;
