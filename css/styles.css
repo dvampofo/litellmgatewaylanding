@@ -176,7 +176,7 @@ body {
 
 /* Hero screenshot styling */
 .hero .screenshot-image {
-  min-height: 450px;
+  min-height: 950px;
   max-height: 600px;
   object-fit: contain;
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
@@ -232,7 +232,7 @@ body {
   }
 
   .hero .screenshot-image {
-    min-height: 950px;
+    min-height: 350px;
     max-height: 450px;
   }
 }
