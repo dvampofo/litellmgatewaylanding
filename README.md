@@ -1,4 +1,4 @@
-# LiteLLM Gateway - Landing Page 3
+# LiteLLM Gateway - Landing Page
 
 A responsive landing page for the LiteLLM Gateway project - an AI gateway that turns bloated subscriptions into lean, usage-based billing.
 
