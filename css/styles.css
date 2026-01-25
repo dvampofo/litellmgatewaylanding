@@ -204,6 +204,11 @@ body {
   .hero .lead {
     font-size: 2rem;
   }
+
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 550px;
+  }
 }
 
 /* Desktop */
@@ -211,6 +216,11 @@ body {
   .hero {
     min-height: 90vh;
     padding: 8rem 0 4rem 0;
+  }
+
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 500px;
   }
 }
 
@@ -231,9 +241,14 @@ body {
     margin-bottom: 2.5rem;
   }
 
-  .hero .screenshot-image {
-    min-height: 350px;
-    max-height: 450px;
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 400px;
+    max-height: 500px;
+  }
+
+  .hero .col-lg-5 {
+    display: block;
   }
 }
 
@@ -262,9 +277,10 @@ body {
     width: 100%;
   }
 
-  .hero .screenshot-image {
-    min-height: 280px;
-    max-height: 350px;
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 350px;
+    max-height: 450px;
   }
 }
 
@@ -290,9 +306,10 @@ body {
     font-size: 1rem;
   }
 
-  .hero .screenshot-image {
-    min-height: 220px;
-    max-height: 280px;
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 280px;
+    max-height: 350px;
   }
 }
 
@@ -306,9 +323,10 @@ body {
     font-size: 1rem;
   }
 
-  .hero .screenshot-image {
-    min-height: 200px;
-    max-height: 250px;
+  .hero .screenshot-image,
+  .hero .screenshot-placeholder {
+    min-height: 250px;
+    max-height: 300px;
   }
 }
 
