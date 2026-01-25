@@ -108,10 +108,12 @@ body {
 }
 
 /* ===================================
-   Hero Section
+   Hero Section - Full Height
    =================================== */
 .hero {
-  padding: 6rem 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
   background: linear-gradient(
     135deg,
     var(--clr-surface-a0) 0%,
@@ -119,6 +121,7 @@ body {
   );
   position: relative;
   overflow: hidden;
+  padding: 8rem 0 4rem 0;
 }
 
 .hero::before {
@@ -137,10 +140,16 @@ body {
   pointer-events: none;
 }
 
+.hero .container {
+  position: relative;
+  z-index: 1;
+}
+
 .hero h1 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 700;
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
+  line-height: 1.2;
   background: linear-gradient(
     135deg,
     var(--clr-primary-a30) 0%,
@@ -151,10 +160,156 @@ body {
   background-clip: text;
 }
 
-.hero p {
-  font-size: clamp(1.1rem, 2vw, 1.5rem);
+.hero .lead {
+  font-size: clamp(1.2rem, 2.5vw, 1.75rem);
   color: var(--clr-surface-a50);
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
+  line-height: 1.5;
+  max-width: 600px;
+}
+
+.hero .btn-primary-custom,
+.hero .btn-secondary-custom {
+  font-size: 1.125rem;
+  padding: 1.125rem 2.75rem;
+}
+
+/* Hero screenshot styling */
+.hero .screenshot-image {
+  min-height: 450px;
+  max-height: 600px;
+  object-fit: contain;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.hero .screenshot-image:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 70px rgba(73, 103, 188, 0.3);
+}
+
+/* ===================================
+   Hero Responsive Design
+   =================================== */
+
+/* Large desktops */
+@media (min-width: 1400px) {
+  .hero {
+    padding: 10rem 0 6rem 0;
+  }
+
+  .hero h1 {
+    font-size: 5.5rem;
+  }
+
+  .hero .lead {
+    font-size: 2rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 992px) and (max-width: 1399px) {
+  .hero {
+    min-height: 90vh;
+    padding: 8rem 0 4rem 0;
+  }
+}
+
+/* Tablet */
+@media (max-width: 991px) {
+  .hero {
+    min-height: auto;
+    padding: 6rem 0 4rem 0;
+  }
+
+  .hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .lead {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .hero .screenshot-image {
+    min-height: 350px;
+    max-height: 450px;
+  }
+}
+
+/* Mobile landscape and small tablets */
+@media (max-width: 768px) {
+  .hero {
+    padding: 5rem 0 3rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.75rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .hero .lead {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+  }
+
+  .hero .d-flex {
+    flex-direction: column;
+  }
+
+  .hero .btn-primary-custom,
+  .hero .btn-secondary-custom {
+    width: 100%;
+  }
+
+  .hero .screenshot-image {
+    min-height: 280px;
+    max-height: 350px;
+  }
+}
+
+/* Mobile portrait */
+@media (max-width: 576px) {
+  .hero {
+    padding: 4rem 0 2rem 0;
+  }
+
+  .hero h1 {
+    font-size: 2.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero .lead {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero .btn-primary-custom,
+  .hero .btn-secondary-custom {
+    padding: 1rem 2rem;
+    font-size: 1rem;
+  }
+
+  .hero .screenshot-image {
+    min-height: 220px;
+    max-height: 280px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 400px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero .lead {
+    font-size: 1rem;
+  }
+
+  .hero .screenshot-image {
+    min-height: 200px;
+    max-height: 250px;
+  }
 }
 
 /* ===================================
