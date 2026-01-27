@@ -220,31 +220,31 @@
 
               <div class="dashboard-stats-grid">
                 <div class="dashboard-stat-card">
-                  <div class="dashboard-stat-title">Total Market Cap</div>
-                  <div class="dashboard-stat-value" id="market-cap">$2.36T</div>
+                  <div class="dashboard-stat-title">Total Tokens Used</div>
+                  <div class="dashboard-stat-value" id="total-tokens">10.0M</div>
                   <div class="dashboard-stat-change dashboard-change-up">
-                    <i class="fas fa-arrow-up"></i> 3.24%
+                    <i class="fas fa-arrow-up"></i> 12.5% vs last month
                   </div>
                 </div>
                 <div class="dashboard-stat-card">
-                  <div class="dashboard-stat-title">24h Volume</div>
-                  <div class="dashboard-stat-value" id="total-volume">$86.54B</div>
-                  <div class="dashboard-stat-change dashboard-change-up">
-                    <i class="fas fa-arrow-up"></i> 5.67%
-                  </div>
-                </div>
-                <div class="dashboard-stat-card">
-                  <div class="dashboard-stat-title">Bitcoin Dominance</div>
-                  <div class="dashboard-stat-value" id="btc-dominance">46.8%</div>
+                  <div class="dashboard-stat-title">Monthly Cost</div>
+                  <div class="dashboard-stat-value" id="monthly-cost">$45.20</div>
                   <div class="dashboard-stat-change dashboard-change-down">
-                    <i class="fas fa-arrow-down"></i> 1.32%
+                    <i class="fas fa-arrow-down"></i> 8.3% cost optimization
                   </div>
                 </div>
                 <div class="dashboard-stat-card">
-                  <div class="dashboard-stat-title">Active Cryptocurrencies</div>
-                  <div class="dashboard-stat-value" id="active-cryptos">12,847</div>
+                  <div class="dashboard-stat-title">Cost per 1M Tokens</div>
+                  <div class="dashboard-stat-value" id="cost-per-million">$4.52</div>
                   <div class="dashboard-stat-change dashboard-change-up">
-                    <i class="fas fa-arrow-up"></i> 0.84%
+                    <i class="fas fa-arrow-up"></i> Multi-model mix
+                  </div>
+                </div>
+                <div class="dashboard-stat-card">
+                  <div class="dashboard-stat-title">Savings vs GPT-4</div>
+                  <div class="dashboard-stat-value" id="savings-vs-gpt4">$72.80</div>
+                  <div class="dashboard-stat-change dashboard-change-up">
+                    <i class="fas fa-arrow-up"></i> 61.6% savings
                   </div>
                 </div>
               </div>
@@ -252,90 +252,80 @@
               <div class="dashboard-main-content">
                 <div class="dashboard-card">
                   <div class="dashboard-card-header">
-                    <h2 class="dashboard-card-title">Top Cryptocurrencies</h2>
-                    <a href="#" class="dashboard-view-all">View All</a>
+                    <h2 class="dashboard-card-title">LLM Model Pricing</h2>
+                    <a href="#" class="dashboard-view-all">View All Models</a>
                   </div>
                   <div class="dashboard-card-content">
                     <div class="dashboard-table-wrapper">
                       <table class="dashboard-table">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Price</th>
-                          <th>24h Change</th>
-                          <th>Market Cap</th>
+                          <th>Model Name</th>
+                          <th>Input Price</th>
+                          <th>Context</th>
+                          <th>Monthly Cost</th>
                         </tr>
                       </thead>
-                      <tbody id="crypto-table-body">
+                      <tbody id="model-table-body">
                         <tr>
                           <td>
                             <div class="dashboard-crypto-name">
-                              <div class="dashboard-crypto-icon">
-                                <i class="fab fa-bitcoin"></i>
-                              </div>
-                              Bitcoin
-                              <span class="dashboard-crypto-symbol">BTC</span>
+                              <div class="dashboard-crypto-icon">🤖</div>
+                              Mistral 7B
+                              <span class="dashboard-crypto-symbol">MISTRAL</span>
                             </div>
                           </td>
-                          <td>$61,382.45</td>
-                          <td><span class="dashboard-price-change dashboard-price-change-up">+2.48%</span></td>
-                          <td>$1.21T</td>
+                          <td>$0.27/1M</td>
+                          <td>64K</td>
+                          <td>$3.70</td>
                         </tr>
                         <tr>
                           <td>
                             <div class="dashboard-crypto-name">
-                              <div class="dashboard-crypto-icon">
-                                <i class="fab fa-ethereum"></i>
-                              </div>
-                              Ethereum
-                              <span class="dashboard-crypto-symbol">ETH</span>
+                              <div class="dashboard-crypto-icon">⚡</div>
+                              Claude 3.5 Sonnet
+                              <span class="dashboard-crypto-symbol">CLAUDE</span>
                             </div>
                           </td>
-                          <td>$3,405.67</td>
-                          <td><span class="dashboard-price-change dashboard-price-change-up">+1.87%</span></td>
-                          <td>$408.92B</td>
+                          <td>$3.00/1M</td>
+                          <td>200K</td>
+                          <td>$58.50</td>
                         </tr>
                         <tr>
                           <td>
                             <div class="dashboard-crypto-name">
-                              <div class="dashboard-crypto-icon">
-                                <i class="fas fa-coins"></i>
-                              </div>
-                              Binance Coin
-                              <span class="dashboard-crypto-symbol">BNB</span>
+                              <div class="dashboard-crypto-icon">🔷</div>
+                              Gemini 2.5 Flash
+                              <span class="dashboard-crypto-symbol">GEMINI</span>
                             </div>
                           </td>
-                          <td>$586.32</td>
-                          <td><span class="dashboard-price-change dashboard-price-change-down">-0.34%</span></td>
-                          <td>$89.75B</td>
+                          <td>$0.075/1M</td>
+                          <td>1M</td>
+                          <td>$1.88</td>
                         </tr>
                         <tr>
                           <td>
                             <div class="dashboard-crypto-name">
-                              <div class="dashboard-crypto-icon">
-                                <i class="fas fa-rocket"></i>
-                              </div>
-                              Solana
-                              <span class="dashboard-crypto-symbol">SOL</span>
+                              <div class="dashboard-crypto-icon">🦙</div>
+                              Llama 3.1 70B
+                              <span class="dashboard-crypto-symbol">LLAMA</span>
                             </div>
                           </td>
-                          <td>$142.18</td>
-                          <td><span class="dashboard-price-change dashboard-price-change-up">+5.26%</span></td>
-                          <td>$63.24B</td>
+                          <td>$0.23/1M</td>
+                          <td>128K</td>
+                          <td>$3.15</td>
                         </tr>
                         <tr>
                           <td>
                             <div class="dashboard-crypto-name">
-                              <div class="dashboard-crypto-icon">
-                                <i class="fas fa-paw"></i>
-                              </div>
-                              Dogecoin
-                              <span class="dashboard-crypto-symbol">DOGE</span>
+                              <div class="dashboard-crypto-icon">🔴</div>
+                              OpenAI GPT-4
+                              <span class="dashboard-crypto-symbol">GPT-4</span>
                             </div>
                           </td>
-                          <td>$0.1289</td>
-                          <td><span class="dashboard-price-change dashboard-price-change-down">-1.52%</span></td>
-                          <td>$18.55B</td>
+                          <td>$2.50/1M</td>
+                          <td>128K</td>
+                          <td>$118.00</td>
                         </tr>
                       </tbody>
                     </table>
@@ -345,7 +335,7 @@
 
                 <div class="dashboard-card">
                   <div class="dashboard-card-header">
-                    <h2 class="dashboard-card-title">Price Chart (BTC)</h2>
+                    <h2 class="dashboard-card-title">Monthly Cost Trend</h2>
                     <div>
                       <select id="timeframe-select" class="dashboard-timeframe-select">
                         <option value="7">7D</option>
