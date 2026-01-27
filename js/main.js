@@ -1,11 +1,28 @@
 /**
  * LiteLLM Gateway Landing Page - Main JavaScript
- * Handles smooth scrolling, button interactions, and other UI enhancements
+ * Handles smooth scrolling, button interactions, and pricing toggle
  */
 
-// Wait for DOM to be fully loaded
 document.addEventListener('DOMContentLoaded', function() {
     
+    // ===================================
+    // Price Data for Billing Toggle
+    // ===================================
+    const priceData = {
+        starter: {
+            monthly: '$2000',
+            yearly: '$18000'
+        },
+        growth: {
+            monthly: '$2000',
+            yearly: '$18000'
+        },
+        enterprise: {
+            monthly: '$2000',
+            yearly: '$18000'
+        }
+    };
+
     // ===================================
     // Smooth Scrolling for CTA Buttons
     // ===================================
@@ -23,6 +40,35 @@ document.addEventListener('DOMContentLoaded', function() {
                     block: 'start'
                 });
             }
+        });
+    });
+
+    // ===================================
+    // Pricing Billing Toggle
+    // ===================================
+    const toggleButtons = document.querySelectorAll('.toggle-btn');
+    const pricingCards = document.querySelectorAll('.pricing-card');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Update active state
+            toggleButtons.forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+
+            const billingMode = this.getAttribute('data-billing');
+            
+            // Update prices for all cards
+            pricingCards.forEach(card => {
+                const plan = card.getAttribute('data-plan');
+                const priceElement = card.querySelector('.price');
+                const periodElement = card.querySelector('.period');
+                
+                if (priceData[plan]) {
+                    const newPrice = priceData[plan][billingMode];
+                    priceElement.textContent = newPrice;
+                    periodElement.textContent = billingMode === 'monthly' ? '/month' : '/year';
+                }
+            });
         });
     });
 
@@ -45,6 +91,27 @@ document.addEventListener('DOMContentLoaded', function() {
             window.location.href = 'mailto:your-email@example.com';
         });
     }
+
+    // ===================================
+    // Pricing CTA Button Handlers
+    // ===================================
+    const pricingCtaButtons = document.querySelectorAll('.pricing-cta-btn');
+    
+    pricingCtaButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            const card = this.closest('.pricing-card');
+            const plan = card.getAttribute('data-plan');
+            
+            // Log for debugging - replace with your actual action
+            console.log(`User clicked GET STARTED for ${plan} plan`);
+            
+            // You can replace this with:
+            // - Navigation to checkout page
+            // - Modal dialog
+            // - Direct link to sign up
+            // window.location.href = `/checkout/${plan}`;
+        });
+    });
 
     // ===================================
     // Navbar Active Link on Scroll
@@ -75,7 +142,7 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', setActiveNavLink);
 
     // ===================================
-    // Add Animation on Scroll (Optional)
+    // Add Animation on Scroll
     // ===================================
     const observerOptions = {
         threshold: 0.1,
@@ -100,6 +167,15 @@ document.addEventListener('DOMContentLoaded', function() {
         observer.observe(card);
     });
 
+    // Observe pricing cards for animation
+    const pricingCardsAnimation = document.querySelectorAll('.pricing-card');
+    pricingCardsAnimation.forEach(card => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px)';
+        card.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+        observer.observe(card);
+    });
+
     // ===================================
     // Mobile Menu Auto-Close
     // ===================================
@@ -108,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (navbarCollapse.classList.contains('show')) {
+            if (navbarCollapse && navbarCollapse.classList.contains('show')) {
                 navbarToggler.click();
             }
         });
