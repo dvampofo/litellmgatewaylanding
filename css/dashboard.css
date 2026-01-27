@@ -242,7 +242,7 @@
   width: 100%;
   border-collapse: collapse;
   font-size: 13px;
-  min-width: 600px; /* Minimum width to enable scrolling on mobile */
+  min-width: 100px; /* Minimum width to enable scrolling on mobile */
 }
 
 .dashboard-table th {
