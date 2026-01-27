@@ -114,11 +114,6 @@ body {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  background: linear-gradient(
-    135deg,
-    var(--clr-surface-a0) 0%,
-    var(--clr-surface-tonal-a10) 100%
-  );
   position: relative;
   overflow: hidden;
   padding: 8rem 0 4rem 0;
@@ -152,11 +147,6 @@ body {
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(
-    circle at 20% 50%,
-    var(--clr-primary-a0) 0%,
-    transparent 50%
-  );
   opacity: 0.1;
   pointer-events: none;
   z-index: 0;
