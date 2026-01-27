@@ -13,11 +13,13 @@ litellm-gateway-landing/
 ├── index.html          # Main HTML file
 ├── css/
 │   └── styles.css      # All custom styles
+│   └── dashboard.css
 ├── js/
 │   └── main.js         # JavaScript functionality
 │   └── chart-config.js
+│   └── dashboard.js
 ├── images/             # Screenshots and images
-│   ├── dashboard.png
+│   ├── dashboard1.png
 │   ├── cost-chart.png
 │   └── architecture.png
 └── README.md           # Project documentation
