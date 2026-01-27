@@ -16,6 +16,9 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
 
+  <!-- Chart.js Library -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@3.9.1/dist/chart.min.js"></script>
+
   <!-- Custom CSS -->
   <link rel="stylesheet" href="css/styles.css" />
 </head>
@@ -98,8 +101,12 @@
       </div>
       <div class="row mt-4">
         <div class="col-md-6">
-          <img src="images/cost-comparison.png" alt="Cost Comparison Chart showing subscription vs usage-based pricing"
-            class="screenshot-image">
+          <!-- Chart.js Cost Comparison Chart -->
+          <div class="chart-wrapper">
+            <div class="chart-container">
+              <canvas id="cost-comparison-chart"></canvas>
+            </div>
+          </div>
         </div>
         <div class="col-md-6">
           <img src="images/usage-analytics.png" alt="Usage Analytics Dashboard" class="screenshot-image">
@@ -557,6 +564,9 @@
 
   <!-- Custom JS -->
   <script src="js/main.js"></script>
+  
+  <!-- Chart.js Configuration -->
+  <script src="js/chart-config.js"></script>
 </body>
 
 </html>
