@@ -15,6 +15,7 @@ litellm-gateway-landing/
 │   └── styles.css      # All custom styles
 ├── js/
 │   └── main.js         # JavaScript functionality
+│   └── chart-config.js
 ├── images/             # Screenshots and images
 │   ├── dashboard.png
 │   ├── cost-chart.png
