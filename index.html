@@ -233,7 +233,96 @@
           </ul>
         </div>
         <div class="col-lg-6">
-          <img src="images/model-routing.png" alt="Model Routing Architecture Diagram" class="screenshot-image">
+          <!-- Interactive API Flow Diagram -->
+          <div class="api-flow-diagram">
+            <div class="flow-container">
+              <!-- Step 1: User Request -->
+              <div class="flow-step step-1">
+                <div class="step-icon">📱</div>
+                <div class="step-label">Your Request</div>
+                <button class="flow-btn" id="startFlowBtn">Send Request →</button>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flow-arrow arrow-1">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polyline points="10,50 90,50" stroke="currentColor" stroke-width="2" fill="none" class="arrow-line"/>
+                  <polyline points="80,40 90,50 80,60" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+
+              <!-- Step 2: LiteLLM Gateway -->
+              <div class="flow-step step-2">
+                <div class="step-icon">⚙️</div>
+                <div class="step-label">LiteLLM Gateway</div>
+                <div class="step-info">Analyzes & Routes</div>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flow-arrow arrow-2">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polyline points="10,50 90,50" stroke="currentColor" stroke-width="2" fill="none" class="arrow-line"/>
+                  <polyline points="80,40 90,50 80,60" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+
+              <!-- Step 3: Model Comparison -->
+              <div class="flow-step step-3">
+                <div class="step-label">Route Options</div>
+                <div class="model-comparison">
+                  <div class="model-option">
+                    <div class="model-name">Claude</div>
+                    <div class="model-cost">$3.00/M</div>
+                  </div>
+                  <div class="model-option">
+                    <div class="model-name">Mistral</div>
+                    <div class="model-cost">$0.27/M</div>
+                  </div>
+                  <div class="model-option">
+                    <div class="model-name">Gemini</div>
+                    <div class="model-cost">$0.075/M</div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Arrow -->
+              <div class="flow-arrow arrow-3">
+                <svg viewBox="0 0 100 100" preserveAspectRatio="none">
+                  <polyline points="10,50 90,50" stroke="currentColor" stroke-width="2" fill="none" class="arrow-line"/>
+                  <polyline points="80,40 90,50 80,60" stroke="currentColor" stroke-width="2" fill="none"/>
+                </svg>
+              </div>
+
+              <!-- Step 4: Best Choice Highlighted -->
+              <div class="flow-step step-4 best-choice">
+                <div class="step-icon">✨</div>
+                <div class="step-label">Best Choice</div>
+                <div class="chosen-model">
+                  <div class="model-icon">🦙</div>
+                  <div class="model-details">
+                    <div class="model-name">Mistral</div>
+                    <div class="savings-badge">Save $2.73/M</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Cost Summary -->
+            <div class="flow-summary">
+              <div class="summary-item">
+                <span class="summary-label">Your Cost:</span>
+                <span class="summary-value your-cost">$0.27/M</span>
+              </div>
+              <div class="summary-item">
+                <span class="summary-label">vs OpenAI GPT-4:</span>
+                <span class="summary-value openai-cost">$2.50/M</span>
+              </div>
+              <div class="summary-item highlight">
+                <span class="summary-label">Total Savings:</span>
+                <span class="summary-value savings-total">$2.23/M ✨</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <!-- Dashboard Component -->
@@ -386,6 +475,11 @@
                   </div>
                 </div>
               </div>
+
+              <!-- <div class="dashboard-footer">
+                <p>Data provided by CoinGecko API • Updated every 5 minutes</p>
+                <p>© 2023 CryptoVision Dashboard • All rights reserved</p>
+              </div> -->
             </div>
           </div>
         </div>
@@ -574,30 +668,23 @@
             <h3 class="plan-name">STARTER</h3>
 
             <div class="price-section">
-              <span class="price">$9</span>
+              <span class="price">$2000</span>
               <span class="period">/month</span>
             </div>
 
-            <p class="plan-description">Perfect for individual developers testing LiteLLM.</p>
-
-            <div class="divider"></div>
-
-            <div class="price-details">
-              <p class="included-tokens">Includes 5M tokens/month</p>
-              <p class="overage-rate">Overage: $0.004 per 1M tokens</p>
-            </div>
+            <p class="plan-description">Perfect for small teams looking to automate basic tasks.</p>
 
             <div class="divider"></div>
 
             <div class="features-section">
               <h4 class="features-label">WHAT'S INCLUDED:</h4>
               <ul class="features-list">
-                <li class="feature-item">✓ Full API access to all models</li>
-                <li class="feature-item">✓ Multi-model routing</li>
-                <li class="feature-item">✓ Real-time cost tracking</li>
-                <li class="feature-item">✓ Basic dashboard</li>
-                <li class="feature-item">✓ Email support</li>
-                <li class="feature-item">✓ Cancel anytime</li>
+                <li class="feature-item">2 Custom Workflows</li>
+                <li class="feature-item">Up to 3 Integrations</li>
+                <li class="feature-item">Email Support</li>
+                <li class="feature-item">Basic Dashboard Access</li>
+                <li class="feature-item">1 Revision Round</li>
+                <li class="feature-item">Pause or cancel anytime</li>
               </ul>
             </div>
 
@@ -613,30 +700,23 @@
             <h3 class="plan-name">GROWTH</h3>
 
             <div class="price-section">
-              <span class="price">$29</span>
+              <span class="price">$2000</span>
               <span class="period">/month</span>
             </div>
 
-            <p class="plan-description">Ideal for small teams and growing projects.</p>
-
-            <div class="divider"></div>
-
-            <div class="price-details">
-              <p class="included-tokens">Includes 25M tokens/month</p>
-              <p class="overage-rate">Overage: $0.003 per 1M tokens</p>
-            </div>
+            <p class="plan-description">Ideal for growing businesses ready to automate key operations.</p>
 
             <div class="divider"></div>
 
             <div class="features-section">
               <h4 class="features-label">WHAT'S INCLUDED:</h4>
               <ul class="features-list">
-                <li class="feature-item">✓ Full API access to all models</li>
-                <li class="feature-item">✓ Multi-model routing</li>
-                <li class="feature-item">✓ Real-time cost tracking</li>
-                <li class="feature-item">✓ Advanced analytics</li>
-                <li class="feature-item">✓ Priority email support</li>
-                <li class="feature-item">✓ Cancel anytime</li>
+                <li class="feature-item">5–7 Custom Workflows</li>
+                <li class="feature-item">Up to 8 Integrations</li>
+                <li class="feature-item">Priority Email & Chat Support</li>
+                <li class="feature-item">Advanced Analytics Dashboard</li>
+                <li class="feature-item">Monthly Optimization</li>
+                <li class="feature-item">Pause or cancel anytime</li>
               </ul>
             </div>
 
@@ -650,30 +730,23 @@
             <h3 class="plan-name">ENTERPRISE</h3>
 
             <div class="price-section">
-              <span class="price">$99</span>
+              <span class="price">$2000</span>
               <span class="period">/month</span>
             </div>
 
-            <p class="plan-description">For teams with high-volume AI needs.</p>
-
-            <div class="divider"></div>
-
-            <div class="price-details">
-              <p class="included-tokens">Includes 100M tokens/month</p>
-              <p class="overage-rate">Overage: $0.002 per 1M tokens</p>
-            </div>
+            <p class="plan-description">Tailored solutions for companies with complex high-volume needs.</p>
 
             <div class="divider"></div>
 
             <div class="features-section">
               <h4 class="features-label">WHAT'S INCLUDED:</h4>
               <ul class="features-list">
-                <li class="feature-item">✓ Full API access to all models</li>
-                <li class="feature-item">✓ Multi-model routing</li>
-                <li class="feature-item">✓ Real-time cost tracking</li>
-                <li class="feature-item">✓ Advanced analytics</li>
-                <li class="feature-item">✓ Email support</li>
-                <li class="feature-item">✓ Cancel anytime</li>
+                <li class="feature-item">Unlimited Workflows</li>
+                <li class="feature-item">Custom API Integration</li>
+                <li class="feature-item">Dedicated Account Manager</li>
+                <li class="feature-item">Onboarding & Team Training</li>
+                <li class="feature-item">Real-Time Monitoring & Support</li>
+                <li class="feature-item">Pause or cancel anytime</li>
               </ul>
             </div>
 
@@ -856,9 +929,9 @@
         If you're tired of paying for AI capacity gathering dust, this
         architecture is worth exploring.
       </p>
-      <!-- <button class="btn-primary-custom" data-scroll="#contact">
+      <button class="btn-primary-custom" data-scroll="#contact">
         Get the Technical Breakdown
-      </button> -->
+      </button>
     </div>
   </section>
 
@@ -917,6 +990,9 @@
 
   <!-- Dashboard JavaScript -->
   <script src="js/dashboard.js"></script>
+
+  <!-- API Flow Diagram -->
+  <script src="js/api-flow.js"></script>
 </body>
 
 </html>
