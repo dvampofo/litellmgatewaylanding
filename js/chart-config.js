@@ -191,9 +191,9 @@ document.addEventListener("DOMContentLoaded", function () {
               color: "#717171",
               font: {
                 family: "'Inter', sans-serif",
-                size: 12,
+                size: 11,
               },
-              padding: 12,
+              padding: 10,
               stepSize: 10,
               callback: function (value) {
                 return "$" + value;
@@ -224,18 +224,26 @@ document.addEventListener("DOMContentLoaded", function () {
               // Small phones (< 480px)
               chart.options.layout.padding.bottom = 55;
               chart.options.plugins.title.font.size = 11;
+              chart.options.scales.y.ticks.font.size = 10;
+              chart.options.scales.y.title.font.size = 11;
             } else if (width < 600) {
               // Standard phones (480px - 599px)
               chart.options.layout.padding.bottom = 60;
               chart.options.plugins.title.font.size = 12;
+              chart.options.scales.y.ticks.font.size = 10;
+              chart.options.scales.y.title.font.size = 11;
             } else if (width < 768) {
               // Large phones landscape (600px - 767px)
               chart.options.layout.padding.bottom = 65;
               chart.options.plugins.title.font.size = 12;
+              chart.options.scales.y.ticks.font.size = 11;
+              chart.options.scales.y.title.font.size = 12;
             } else {
               // Tablets and larger
               chart.options.layout.padding.bottom = 80;
               chart.options.plugins.title.font.size = 14;
+              chart.options.scales.y.ticks.font.size = 12;
+              chart.options.scales.y.title.font.size = 13;
             }
           },
         },
