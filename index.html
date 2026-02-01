@@ -240,7 +240,7 @@
               <div class="flow-step step-1">
                 <div class="step-icon">📱</div>
                 <div class="step-label">Your Request</div>
-                <button class="flow-btn" id="startFlowBtn">Send Request →</button>
+                <button class="flow-btn" id="startFlowBtn">Start →</button>
               </div>
 
               <!-- Arrow -->
@@ -255,7 +255,7 @@
               <div class="flow-step step-2">
                 <div class="step-icon">⚙️</div>
                 <div class="step-label">LiteLLM Gateway</div>
-                <div class="step-info">Analyzes & Routes</div>
+                <div class="step-info">Smart Routing</div>
               </div>
 
               <!-- Arrow -->
@@ -266,22 +266,14 @@
                 </svg>
               </div>
 
-              <!-- Step 3: Model Comparison -->
+              <!-- Step 3: Route Options -->
               <div class="flow-step step-3">
+                <div class="step-icon">🔀</div>
                 <div class="step-label">Route Options</div>
-                <div class="model-comparison">
-                  <div class="model-option">
-                    <div class="model-name">Claude</div>
-                    <div class="model-cost">$3.00/M</div>
-                  </div>
-                  <div class="model-option">
-                    <div class="model-name">Mistral</div>
-                    <div class="model-cost">$0.27/M</div>
-                  </div>
-                  <div class="model-option">
-                    <div class="model-name">Gemini</div>
-                    <div class="model-cost">$0.075/M</div>
-                  </div>
+                <div class="step-options">
+                  <div class="option-badge">Claude</div>
+                  <div class="option-badge">Mistral</div>
+                  <div class="option-badge">Gemini</div>
                 </div>
               </div>
 
@@ -293,32 +285,31 @@
                 </svg>
               </div>
 
-              <!-- Step 4: Best Choice Highlighted -->
+              <!-- Step 4: Best Choice -->
               <div class="flow-step step-4 best-choice">
                 <div class="step-icon">✨</div>
                 <div class="step-label">Best Choice</div>
-                <div class="chosen-model">
-                  <div class="model-icon">🦙</div>
-                  <div class="model-details">
-                    <div class="model-name">Mistral</div>
-                    <div class="savings-badge">Save $2.73/M</div>
-                  </div>
+                <div class="chosen-model-compact">
+                  <div class="model-name-compact">Mistral</div>
+                  <div class="savings-badge-compact">Save $2.23/M</div>
                 </div>
               </div>
             </div>
 
             <!-- Cost Summary -->
-            <div class="flow-summary">
-              <div class="summary-item">
+            <div class="flow-summary-horizontal">
+              <div class="summary-item-h">
                 <span class="summary-label">Your Cost:</span>
                 <span class="summary-value your-cost">$0.27/M</span>
               </div>
-              <div class="summary-item">
-                <span class="summary-label">vs OpenAI GPT-4:</span>
+              <div class="summary-divider">|</div>
+              <div class="summary-item-h">
+                <span class="summary-label">vs GPT-4:</span>
                 <span class="summary-value openai-cost">$2.50/M</span>
               </div>
-              <div class="summary-item highlight">
-                <span class="summary-label">Total Savings:</span>
+              <div class="summary-divider">|</div>
+              <div class="summary-item-h highlight">
+                <span class="summary-label">Savings:</span>
                 <span class="summary-value savings-total">$2.23/M ✨</span>
               </div>
             </div>

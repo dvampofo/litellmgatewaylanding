@@ -12,11 +12,12 @@ A responsive landing page for the LiteLLM Gateway project - an AI gateway that t
 litellm-gateway-landing/
 ├── index.html          # Main HTML file
 ├── css/
-│   └── styles.css      # All custom styles
+│   ├── styles.css      # All custom styles
 │   └── dashboard.css
 ├── js/
-│   └── main.js         # JavaScript functionality
-│   └── chart-config.js
+│   ├── main.js         # JavaScript functionality
+│   ├── chart-config.js
+│   ├── api-flow.js
 │   └── dashboard.js
 ├── images/             # Screenshots and images
 │   ├── dashboard1.png
