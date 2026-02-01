@@ -1388,27 +1388,47 @@ button:focus {
   box-sizing: border-box;
 }
 
-.chart-container {
+/* Horizontal Scroll Container for Mobile */
+.chart-scroll-container {
   position: relative;
   width: 100%;
-  flex: 1;
-  min-height: 400px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-y: hidden;
   background-color: var(--clr-surface-tonal-a10);
   border: 2px solid var(--clr-surface-a20);
   border-radius: 12px;
-  padding: 2rem;
+  padding: 1rem;
+  box-sizing: border-box;
+  transition: all 0.3s ease;
+}
+
+.chart-scroll-container:hover {
+  border-color: var(--clr-primary-a20);
+  box-shadow: 0 10px 30px rgba(73, 103, 188, 0.2);
+}
+
+.chart-container {
+  position: relative;
+  width: 100%;
+  min-width: 100%;
+  flex: 1;
+  background-color: transparent;
+  border: none;
+  border-radius: 0;
+  padding: 0;
   transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
   box-sizing: border-box;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .chart-container:hover {
-  border-color: var(--clr-primary-a20);
-  box-shadow: 0 10px 30px rgba(73, 103, 188, 0.2);
-  transform: translateY(-5px);
+  border-color: transparent;
+  box-shadow: none;
+  transform: none;
 }
 
 /* Chart.js Canvas Styling */
@@ -1421,41 +1441,62 @@ button:focus {
 
 /* Desktop and Large Screens (1200px+) */
 @media (min-width: 1200px) {
-  .chart-container {
-    min-height: 400px;
+  .chart-scroll-container {
+    overflow-x: hidden;
     padding: 2rem;
+  }
+
+  .chart-container {
+    min-width: 100%;
+    min-height: 400px;
   }
 }
 
 /* Large Tablets and Small Desktops (992px - 1199px) */
 @media (max-width: 1199px) and (min-width: 992px) {
-  .chart-container {
-    min-height: 350px;
+  .chart-scroll-container {
+    overflow-x: hidden;
     padding: 1.5rem;
+  }
+
+  .chart-container {
+    min-width: 100%;
+    min-height: 350px;
   }
 }
 
 /* Tablets (768px - 991px) */
 @media (max-width: 991px) and (min-width: 768px) {
-  .chart-container {
-    min-height: 320px;
+  .chart-scroll-container {
+    overflow-x: auto;
     padding: 1.25rem;
+    min-height: 320px;
+  }
+
+  .chart-container {
+    min-width: 800px;
+    min-height: 300px;
   }
 }
 
 /* Large Phones in Landscape (600px - 767px) */
 @media (max-width: 767px) and (min-width: 600px) {
-  .chart-container {
-    min-height: 260px !important;
-    padding: 0.75rem !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
+  .chart-scroll-container {
+    overflow-x: auto;
+    padding: 1rem;
+    min-height: 320px;
+    box-sizing: border-box;
   }
 
   .chart-wrapper {
     width: 100%;
     height: auto;
     box-sizing: border-box;
+  }
+
+  .chart-container {
+    min-width: 700px;
+    min-height: 300px;
   }
 
   .chart-container canvas {
@@ -1466,17 +1507,22 @@ button:focus {
 
 /* Standard Phones (480px - 599px) - Most Common Mobile Phones */
 @media (max-width: 599px) and (min-width: 480px) {
-  .chart-container {
-    min-height: 240px !important;
-    padding: 0.5rem !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
+  .chart-scroll-container {
+    overflow-x: auto;
+    padding: 0.75rem;
+    min-height: 300px;
+    box-sizing: border-box;
   }
 
   .chart-wrapper {
     width: 100%;
     height: auto;
     box-sizing: border-box;
+  }
+
+  .chart-container {
+    min-width: 600px;
+    min-height: 280px;
   }
 
   .chart-container canvas {
@@ -1487,17 +1533,22 @@ button:focus {
 
 /* Small Phones (< 480px) - iPhone SE, Older Small Phones */
 @media (max-width: 479px) {
-  .chart-container {
-    min-height: 220px !important;
-    padding: 0.375rem !important;
-    overflow: hidden !important;
-    box-sizing: border-box !important;
+  .chart-scroll-container {
+    overflow-x: auto;
+    padding: 0.75rem;
+    min-height: 320px;
+    box-sizing: border-box;
   }
 
   .chart-wrapper {
     width: 100%;
     height: auto;
     box-sizing: border-box;
+  }
+
+  .chart-container {
+    min-width: 550px;
+    min-height: 300px;
   }
 
   .chart-container canvas {
@@ -1514,7 +1565,7 @@ button:focus {
 }
 
 /* Match the screenshot-image styling for consistency */
-.chart-container {
+.chart-scroll-container {
   background-color: var(--clr-surface-a10);
 }
 
